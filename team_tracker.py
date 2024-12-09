@@ -107,7 +107,7 @@ def submit_play(defense, result):
 
         messagebox.showinfo("Shot Missed", "The missed shot has been recorded.")
     elif result == "Foul":
-        FT_att = simpledialog.askinteger("Free Throws Attempted", "Free throws attempted:", minvalue=0, maxvalue=3)
+        FT_att = simpledialog.askinteger("Free Throws Attempted", "Free throws attempted:", minvalue=1, maxvalue=3)
         FT_makes = simpledialog.askinteger("Free Throws Made", "Free throws made:", minvalue=0, maxvalue=FT_att)
         if FT_att is not None and FT_makes is not None:
             stats[f"FT_att_{stats_prefix}"] += FT_att
