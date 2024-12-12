@@ -96,7 +96,7 @@ def submit_play(defense, result):
         messagebox.showinfo("Made Shot Recorded", "The made shot has been recorded.")
     elif result == "Miss":
         stats[f"FG_att_{stats_prefix}"] += 1
-        shot_type = simpledialog.askinteger("Shot Type", "Missed shot (2 or 3):")
+        shot_type = simpledialog.askinteger("Shot Type", "Missed shot (2 or 3):", minvalue=2, maxvalue=3)
         if shot_type == 2:
             stats[f"TwoFG_att_{stats_prefix}"] += 1
         elif shot_type == 3:
